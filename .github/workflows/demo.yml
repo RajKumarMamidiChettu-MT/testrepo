@@ -46,7 +46,7 @@ jobs:
       - name: Deploy to Azure Web App
         id: deploy-to-webapp# Reference the deploy web app
         uses: azure/webapps-deploy@v2
-        with:#use app name
+        with:
           app-name: 'blazordemo-git'
           slot-name: 'Production'#use publish profile from the GitHub secrets
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
